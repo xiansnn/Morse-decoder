@@ -6,8 +6,8 @@ from micropython import const
 KEY_IN_GPIO = const(7)
 
 
-from async_morse.decoder import MorseDecoder, RxBuffer, RXTimingProcessor
-from async_morse.display_manager import MorseAudioDisplay
+from Morse_decoder.decoder import MorseDecoder, RxBuffer, RXTimingProcessor
+from Morse_decoder.display_manager import MorseAudioDisplay
 
 
     

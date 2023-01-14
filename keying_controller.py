@@ -1,10 +1,10 @@
 from machine import Pin, Signal
 import uasyncio
 import utime
-from async_morse.code_translator import MorseTranslator
+from Morse_decoder.code_translator import MorseTranslator
 from lib_pico.async_push_button import Button
 
-from pulse_utility.pulses import Probe    
+from debug_utility.pulses import Probe    
 probe_gpio = 16
 pb=Probe(probe_gpio)
 

@@ -3,13 +3,13 @@ import utime
 from machine import Pin, Signal
 
 from lib_pico.async_push_button import Button
-from async_morse.user_dialog import UserDialog
-from async_morse.keying_controller import KeyingToneEncoder, KeyingSpeedController
-from async_morse.display_manager import MorseDisplayManager
-from async_morse.code_translator import *
+from Morse_decoder.user_dialog import UserDialog
+from Morse_decoder.keying_controller import KeyingToneEncoder, KeyingSpeedController
+from Morse_decoder.display_manager import MorseDisplayManager
+from Morse_decoder.code_translator import *
 
 
-from pulse_utility.pulses import Probe    
+from debug_utility.pulses import Probe    
 probe_gpio = 16
 pb=Probe(probe_gpio)
     
@@ -50,7 +50,7 @@ class RXTimingProcessor():
         self.key_in_pin = Pin(key_in_gpio, Pin.IN)
         self.key_in_signal = Signal(self.key_in_pin, invert = True)
         self.key_in = Button("key", key_in_gpio, pull=-1,
-                 interrupt_service_routine=self.key_in_IRQ_handler, debounce_delay=20,
+                 interrupt_service_routine=self.key_in_IRQ_handler, debounce_delay=30,
                  active_HI=False, both_edge=True )
         self.key_duration_list = []
         self.dot_time_list = DotTimeShiftRegister()
