@@ -1,4 +1,4 @@
-from lib_pico.ST7735_GUI import *
+from lib_pico.ST7735_TextUI import *
 
 class MorseAudioDisplay():
     def __init__(self):
@@ -51,7 +51,7 @@ class MorseDisplayManager():
     
 def test():
     print("start test: 'morse_display_manager'")
-    from async_morse.keying_controller import KeyingSpeedController
+    from Morse_decoder.keying_controller import KeyingSpeedController
     import time
     #init display
     display_manager = MorseDisplayManager()
