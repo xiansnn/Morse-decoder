@@ -57,7 +57,7 @@ class UserDialog():
 
 if __name__ == "__main__":
     
-    from pulse_utility.pulses import Probe
+    from debug_utility.pulses import Probe
     probe_gpio = 16    
     p = Probe(probe_gpio)
     
