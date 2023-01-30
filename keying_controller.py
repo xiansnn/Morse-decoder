@@ -135,7 +135,7 @@ if __name__ == "__main__":
     print("start test <async_keying_controller.py>")
 
     # setup display
-    from async_morse.display_manager import MorseDisplayManager
+    from Morse_decoder.display_manager import MorseDisplayManager
     display_manager = MorseDisplayManager()
 
     # setup TX speed keying manager
